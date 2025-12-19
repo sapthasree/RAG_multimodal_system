@@ -7,6 +7,16 @@ The system is designed to mirror real-world enterprise and research workflows, w
 ## Architecture
 
 ```mermaid
+flowchart TD
+    A[PDF and Text Documents] --> B[Document Ingestion]
+    B --> C[Text Extraction and Metadata]
+    C --> D[Cleaning and Normalization]
+    D --> E[Document Aware Chunking with Overlap]
+    E --> F[Embedding Generation]
+    F --> G[FAISS Vector Store with Metadata Alignment]
+    G --> H[Semantic Retrieval Top K]
+    H --> I[Context Construction with Sources]
+    I --> J[LLM Based Answer Generation RAG]
 
 ```
 
